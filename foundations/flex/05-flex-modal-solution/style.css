@@ -9,7 +9,7 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
-  /* I'll give you this one for free lol */
+  /* I'll give you this one for free */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,8 @@ body {
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
   display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
 .icon {
@@ -34,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  order: -1
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -50,10 +52,6 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
-}
-
-.icon, .close-button {
-  flex-shrink: 0
 }
 
 button {
@@ -74,27 +72,19 @@ button.cancel {
   color: royalblue;
 }
 
-.center {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  margin: 8px;
-  padding: 8px
-}
+/* SOLUTION: */
 
-.center-again {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
+/* header container should be wrapped around the button element as well in order for flex style to work */
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 8px;
-  margin-top: 8px;
-  font-size: large
 }
 
-.buttonz {
-  margin-top: 8px;
-  margin-bottom: 8px
+.text {
+  margin-bottom: 16px;
 }
